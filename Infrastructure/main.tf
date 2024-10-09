@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "us-east-1"
+  region = "ap-south-1"
 }
 
 terraform {
@@ -7,7 +7,7 @@ terraform {
     bucket         = "terraform-bucket-envxchange"
     key            = "terraform.tfstate"
     region         = "ap-south-1"
-    //dynamodb_table = "terraform-lock"
+    dynamodb_table = "terraform-lock"
   }
 }
 module "vpc" {
@@ -24,7 +24,7 @@ module "ecs" {
   private_subnets = module.vpc.private_subnets
 
   # Specify the container images for each service
-  auth_container_image         = "182399702578.dkr.ecr.us-east-1.amazonaws.com/environxchange-auth:latest"  # Replace with your Auth service container image
-  environxchange_container_image = "182399702578.dkr.ecr.us-east-1.amazonaws.com/environxchange-content:latest"  # Replace with your Environxchange service container image
+  auth_container_image         = "182399702578.dkr.ecr.ap-south-1.amazonaws.com/environxchange-auth:latest"  # Replace with your Auth service container image
+  environxchange_container_image = "182399702578.dkr.ecr.ap-south-1.amazonaws.com/environxchange-content:latest"  # Replace with your Environxchange service container image
 }
 
