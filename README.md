@@ -1,1 +1,1 @@
-![ecs-terraform-architecture](https://github.com/user-attachments/assets/d90be35c-49ae-41ce-8b7e-08d78e776f05)
+![ecs-terraform-animated-diagram](https://github.com/user-attachments/assets/e313b651-4fdd-4986-899f-76f770cb9681)
